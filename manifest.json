@@ -1,0 +1,34 @@
+{
+  "name": "cortex-plugin-video-dubbing",
+  "version": "1.0.0",
+  "description": "Video Dubbing & Translation Pipeline — Transcribe, translate via DeepL/LLM, dub via ElevenLabs voice cloning",
+  "kind": "esm",
+  "entryPoint": "mod.ts",
+  "runtime": "deno",
+  "author": "CortexPrism",
+  "license": "MIT",
+  "repository": "https://github.com/CortexPrism/cortex-plugin-video-dubbing",
+  "homepage": "https://cortexprism.io/marketplace/plugins/video-dubbing",
+  "capabilities": ["tools", "network:fetch"],
+  "tools": [
+    { "name": "dub_transcribe", "description": "Transcribe video/audio to text", "params": [] },
+    {
+      "name": "dub_translate",
+      "description": "Translate transcript to target language",
+      "params": []
+    },
+    {
+      "name": "dub_generate_audio",
+      "description": "Generate dubbed audio with voice cloning",
+      "params": []
+    },
+    {
+      "name": "dub_export",
+      "description": "Export localized video with dubbed audio",
+      "params": []
+    }
+  ],
+  "dependencies": {},
+  "peerDependencies": { "cortex": ">=1.0.0" },
+  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+}
